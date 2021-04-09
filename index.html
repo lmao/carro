@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/uikit.css">
+<title>Title</title>
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="site-navbar-top d-none d-md-flex">
+      <div class="container top__bar__style">
+        <div class="row align-items-center">
+          <div class="col-6">
+            <span>Местоположение:</span>
+            <button type="button" class="location" data-toggle="modal" data-target="#exampleModal">
+              Душанбе
+            </button>
+            
+            <!-- Модальное окно -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Заголовок модального окна</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary">Сохранить изменения</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="d-flex ml-auto">
+              <a href="#" class="d-flex align-items-center ml-auto message">
+                <svg width="20" class="mr-2" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9.99976C0 4.48476 4.486 -0.000244141 10 -0.000244141C15.514 -0.000244141 20 4.48476 20 9.99976C20 15.5138 15.514 19.9998 10 19.9998C6.872 19.9998 3.983 18.5768 2.073 16.0978C1.828 15.7788 1.887 15.3218 2.205 15.0778C2.523 14.8318 2.979 14.8928 3.225 15.2098C4.857 17.3298 7.327 18.5458 10 18.5458C14.712 18.5458 18.545 14.7128 18.545 9.99976C18.545 5.28776 14.712 1.45376 10 1.45376C5.288 1.45376 1.454 5.28776 1.454 9.99976C1.454 10.4378 1.487 10.8728 1.552 11.2988C1.612 11.6948 1.339 12.0658 0.943 12.1268C0.544 12.1928 0.175 11.9158 0.114 11.5188C0.038 11.0208 0 10.5098 0 9.99976ZM5.5202 8.80376C6.1812 8.80376 6.7182 9.34076 6.7182 9.99976C6.7182 10.6598 6.1812 11.1968 5.5202 11.1968C4.8602 11.1968 4.3222 10.6598 4.3222 9.99976C4.3222 9.34076 4.8602 8.80376 5.5202 8.80376ZM9.9997 8.80376C10.6597 8.80376 11.1977 9.34076 11.1977 9.99976C11.1977 10.6598 10.6597 11.1968 9.9997 11.1968C9.3387 11.1968 8.8017 10.6598 8.8017 9.99976C8.8017 9.34076 9.3387 8.80376 9.9997 8.80376ZM15.6767 9.99976C15.6767 9.34076 15.1397 8.80376 14.4787 8.80376C13.8187 8.80376 13.2807 9.34076 13.2807 9.99976C13.2807 10.6598 13.8187 11.1968 14.4787 11.1968C15.1397 11.1968 15.6767 10.6598 15.6767 9.99976Z" fill="#676767"/>
+                  </svg>
+                  
+                <span class="d-none d-md-inline-block mr-3">Сообщение</span>
+              </a>
+              <a href="#" class="d-flex align-items-center favourite">
+                <svg width="23" class="mr-2" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7107 1.15304C19.5267 1.71778 21.0367 3.01497 21.8898 4.74305C22.8872 6.83752 23.023 9.25092 22.267 11.4478C21.5711 13.4702 20.4302 15.3035 18.9317 16.8075C17.9491 17.8174 16.8903 18.7472 15.7651 19.5885L15.7055 19.6391C15.3317 19.8907 14.829 19.7919 14.5739 19.4166C14.4442 19.2353 14.3922 19.0083 14.4296 18.7873C14.467 18.5662 14.5907 18.3701 14.7725 18.2435C15.8283 17.4479 16.8238 16.5724 17.7504 15.6243C19.0849 14.3111 20.104 12.7019 20.7284 10.9219C21.3289 9.14826 21.2074 7.20347 20.3909 5.52173C19.7338 4.19875 18.5761 3.20555 17.1846 2.77108C15.4097 2.20568 13.4761 2.54843 11.993 3.69133C11.6982 3.91384 11.2952 3.91384 11.0004 3.69133C9.51796 2.54684 7.58354 2.20395 5.80879 2.77108C4.40796 3.19595 3.23871 4.18615 2.57274 5.51162C1.77466 7.19211 1.6605 9.12574 2.2551 10.8916C2.88212 12.6673 3.90095 14.2726 5.23306 15.5839C7.20138 17.5066 9.37187 19.2023 11.7052 20.6402C12.0019 20.8499 12.1324 21.2304 12.0284 21.5828C11.9244 21.9352 11.6096 22.1793 11.2485 22.1875C11.0858 22.1885 10.9265 22.1391 10.7919 22.0459C8.36132 20.5483 6.10086 18.7813 4.0518 16.7772C2.54492 15.2781 1.39984 13.4435 0.706557 11.4174C-0.0233626 9.22362 0.126472 6.82492 1.12347 4.74305C1.97653 3.01497 3.48657 1.71778 5.30254 1.15304C7.39044 0.496044 9.65574 0.798825 11.5066 1.98228C13.3575 0.798825 15.6228 0.496044 17.7107 1.15304ZM16.8967 8.89938C16.8553 7.96482 16.2443 7.15653 15.368 6.87684C15.0422 6.66961 14.8975 6.26246 15.0176 5.89078C15.1376 5.51909 15.4914 5.27902 15.8743 5.30937C17.3544 5.78537 18.408 7.12201 18.5445 8.69712C18.5725 8.91735 18.5127 9.13982 18.3783 9.31469C18.244 9.48957 18.0464 9.60225 17.8298 9.62749C17.3752 9.68734 16.9584 9.36211 16.8967 8.89938Z" fill="#676767"/>
+                  </svg>
+                  
+                <span class="d-none d-md-inline-block mr-3">Избранное</span>
+              </a>
+              <a href="#" class="d-flex align-items-center user">
+                <svg width="16" class="mr-2" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.05836 5.35387C4.05836 3.19392 5.82642 1.43696 8 1.43696C10.1736 1.43696 11.9416 3.19392 11.9416 5.35387C11.9416 7.51281 10.1736 9.26977 8 9.26977C5.82642 9.26977 4.05836 7.51281 4.05836 5.35387ZM2.61233 5.35387C2.61233 8.30479 5.02943 10.7067 8 10.7067C10.9706 10.7067 13.3867 8.30479 13.3867 5.35387C13.3867 2.40194 10.9706 0 8 0C5.02943 0 2.61233 2.40194 2.61233 5.35387ZM6.97761 19.985C7.3127 19.995 7.65384 20 8 20C11.4345 20 16 19.619 16 16.3301C16 12.6392 9.97836 12.6392 8 12.6392C4.56553 12.6392 0 13.0202 0 16.3101C0 17.2951 0.460881 18.624 2.6566 19.363C3.03597 19.493 3.44453 19.288 3.57333 18.913C3.70113 18.538 3.49887 18.131 3.1205 18.004C1.61811 17.4981 1.44503 16.7951 1.44503 16.3101C1.44503 14.8271 3.65082 14.0751 8 14.0751C12.3492 14.0751 14.555 14.8341 14.555 16.3301C14.555 17.8121 12.3492 18.563 8 18.563C7.66792 18.563 7.34088 18.559 7.01887 18.55C6.63245 18.553 6.2883 18.851 6.27723 19.247C6.26516 19.644 6.57912 19.975 6.97761 19.985Z" fill="#676767"/>
+                  </svg>
+                  
+                <span class="d-none d-md-inline-block mr-3">Личный кабинет</span>
+              </a>
+              <a href="#" class="d-flex align-items-center adt">
+                <svg width="20" class="mr-2" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7754 9.35943C19.6316 9.50154 19.437 9.58019 19.2348 9.57784V9.56025C18.8122 9.56025 18.4697 9.21767 18.4697 8.79507V6.2533C18.4697 3.20141 16.7986 1.53034 13.7555 1.53034H6.2533C3.2102 1.53034 1.53034 3.2102 1.53034 6.2533V13.7555C1.53034 16.7898 3.2102 18.4697 6.2533 18.4697H13.7555C16.7986 18.4697 18.4697 16.7898 18.4697 13.7555C18.4697 13.3329 18.8122 12.9903 19.2348 12.9903C19.6574 12.9903 20 13.3329 20 13.7555C20 17.6077 17.6077 20 13.7555 20H6.2533C2.39226 20 0 17.6077 0 13.7555V6.2533C0 2.39226 2.39226 0 6.2533 0H13.7555C17.5901 0 20 2.39226 20 6.2533V8.82146C20 9.0236 19.9191 9.21733 19.7754 9.35943ZM10.0352 5.84872C10.1175 5.8487 10.1984 5.8621 10.275 5.88769C10.5937 5.9801 10.8267 6.27419 10.8267 6.62269V9.01495H13.4301C13.5203 9.0139 13.6091 9.029 13.6925 9.05868C13.8089 9.09534 13.9158 9.15997 14.0032 9.24838C14.1453 9.39214 14.224 9.58679 14.2216 9.78892C14.2217 10.2047 13.8898 10.5445 13.4741 10.5541H13.4213H6.65787C6.59279 10.5526 6.52974 10.5431 6.46964 10.5266C6.12655 10.4494 5.87037 10.1449 5.86631 9.78012C5.86396 9.578 5.94262 9.38335 6.08472 9.23959C6.22682 9.09583 6.42055 9.01494 6.62269 9.01495H9.26121V6.6139C9.27067 6.19187 9.61307 5.85336 10.0352 5.84872ZM9.2788 13.3509V12.4714V12.3835C9.28568 12.1805 9.37297 11.9886 9.52145 11.85C9.66992 11.7114 9.86739 11.6376 10.0704 11.6447C10.2741 11.6492 10.4675 11.7358 10.6066 11.8848C10.7456 12.0338 10.8187 12.2326 10.8091 12.4362V13.4037C10.8023 13.6067 10.715 13.7986 10.5665 13.9372C10.418 14.0757 10.2206 14.1496 10.0176 14.1425C9.59704 14.1235 9.26881 13.7718 9.2788 13.3509Z" fill="white"/>
+                  </svg>
+                  
+                  
+                <span class="d-none d-md-inline-block">Подать объявление</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <nav class="navbar navbar-expand-md navbar-light bg-light main-menu" style="box-shadow:none">
+      <div class="container border_bottom">
+    
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.svg" alt="" class="img-fluid">
+        </a>
+
+        <button type="button" id="sidebarCollapse" class="btn btn-link d-block d-md-none">
+                    <i class="fa fa-bars"></i>
+                </button>
+    
+        <div class="collapse navbar-collapse">
+          <div class=" flex-grow-0 mx-auto">
+            <select class="custom-select">
+                <option selected="">Все категории</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            <!-- category-wrap.// -->
+          </div>
+          <form class="input-group col-lg-9 form_style">
+            <input class="form-control search_menu search_image" type="search" placeholder="Search for products..." aria-label="Search">
+            <div class="input-group-btn">
+          <select class="btn btn-default dropdown-toggle toggle_menu">
+            <option selected="">Все города</option>
+            <option value="1">Type 1</option>
+            <option value="2">Type 2</option>
+          </select>
+        </div>
+        <div class="input-group-btn ml-3">
+          <button class="button_menu" type="submit">Найти</button>
+        </div>
+          </form>
+        </div>
+    
+      </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-10 pl-0">
+              <form action="">
+                <input
+                  type="text"
+                  placeholder="Поиск"
+                  class="form-control sidebar_input"
+                  required
+                />
+              </form>
+            </div>
+    
+            <div class="col-2 text-left">
+              <button type="button" id="sidebarCollapseX" class="btn btn-link">
+                                <i class="fa fa-times"></i>
+                            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <ul class="list-unstyled components links">
+        <li class="active">
+          <a href="#"><i class="bx bx-home mr-3"></i> Home</a>
+        </li>
+        <li>
+          <a href="#"><i class="bx bx-carousel mr-3"></i> Products</a>
+        </li>
+        <li>
+          <a href="#"><i class="bx bx-book-open mr-3"></i> Schools</a>
+        </li>
+        <li>
+          <a href="#"><i class="bx bx-crown mr-3"></i> Publishers</a>
+        </li>
+        <li>
+          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bx bx-help-circle mr-3"></i>
+                        Support</a>
+          <ul class="collapse list-unstyled" id="pageSubmenu">
+            <li>
+              <a href="#">Delivery Information</a>
+            </li>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Terms & Conditions</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="bx bx-phone mr-3"></i> Contact</a>
+        </li>
+      </ul>
+    
+      <h6 class="text-uppercase mb-1">Categories</h6>
+      <ul class="list-unstyled components mb-3">
+        <li>
+          <a href="#">Category 1</a>
+        </li>
+        <li>
+          <a href="#">Category 1</a>
+        </li>
+        <li>
+          <a href="#">Category 1</a>
+        </li>
+        <li>
+          <a href="#">Category 1</a>
+        </li>
+        <li>
+          <a href="#">Category 1</a>
+        </li>
+        <li>
+          <a href="#">Category 1</a>
+        </li>
+      </ul>
+    
+      <ul class="social-icons">
+        <li><a href="#" target="_blank" title=""><i class="bx bxl-facebook-square"></i></a></li>
+        <li><a href="#" target="_blank" title=""><i class="bx bxl-twitter"></i></a></li>
+        <li><a href="#" target="_blank" title=""><i class="bx bxl-linkedin"></i></a></li>
+        <li><a href="#" target="_blank" title=""><i class="bx bxl-instagram"></i></a></li>
+      </ul>
+    
+    </nav>
+    
+
+    <!--  -->
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8">
+          <div class="titleRow">
+            <div class="select_title">
+              <h1 class="select_title_h">
+                <a href="">Продажа автомобилей в Таджикистане</a>
+              </h1>
+            </div>
+            <div class="deal">
+                <span class="deal-title">374 005 предложений, из них 69 041 размещено только на Carro.tj</span>
+            </div>
+          </div>
+          
+          <div class="buttonTop_controll">
+            <div class="button_section">
+              <button type="button" class="button_buttonTop active">Все</button>
+              <button type="button" class="button_buttonTop">Новый</button>
+              <button type="button" class="button_buttonTop">С пробегом</button>
+            </div>
+            <div class="button_tabs">
+              <button type="button" class="button_buttonTop active">Марки</button>
+              <button type="button" class="button_buttonTop">Помощник</button>
+            </div>
+          </div>
+          
+          <div class="carsmark">
+            <div class="mark_image d-none d-md-flex">
+              <a class="mark_link" href="">
+                <img class="mark_link_image" src="img/merc.svg" alt="">
+              </a>
+              <a class="mark_link" href="">
+                <img class="mark_link_image" src="img/tayota.svg" alt="">
+              </a>
+              <a class="mark_link" href="">
+                <img class="mark_link_image" src="img/volsk.svg" alt="">
+              </a>
+              <a class="mark_link" href="">
+                <img class="mark_link_image" src="img/kia.svg" alt="">
+              </a>
+              <a class="mark_link" href="">
+                <img class="mark_link_image" src="img/nissan.svg" alt="">
+              </a>
+              <a class="mark_link" href=""> 
+                <img class="mark_link_image"  src="img/reno.svg" alt="">
+              </a>
+              <a class="mark_link" href="">
+                <img class="mark_link_image"  src="img/hyundai.svg" alt="">
+              </a>
+              <a class="mark_link" href="">
+                <img class="mark_link_image"  src="img/chev.svg" alt="">
+              </a>
+              <a class="mark_link" href="">
+                <img class="mark_link_image" src="img/bmw.svg" alt="">
+              </a>
+              <a class="mark_link" href="">
+                <img class="mark_link_image" src="img/lada.svg" alt="">
+              </a>
+            </div>
+            <div class="row">
+              <div class="col index col-6 col-sm-3">
+                <a href="" class="car__name">
+                  <div class="car__mark">LADA(ВАЗ)</div>
+                  <div class="car__item">74519</div>
+                </a>
+                <a href="" class="car__name">
+                  <div class="car__mark">Audi</div>
+                  <div class="car__item">10361</div>
+                </a>
+                <a href="" class="car__name">
+                  <div class="car__mark">BMW</div>
+                  <div class="car__item">14996</div>
+                </a>
+                <a href="" class="car__name">
+                  <div class="car__mark">Chery</div>
+                  <div class="car__item">3395</div>
+                </a>
+                <a href="" class="car__name">
+                  <div class="car__mark">Citroen</div>
+                  <div class="car__item">2419</div>
+                </a>
+              </div>
+              <div class="col index col-6 col-sm-3">
+                <a href="" class="car__name">
+                  <div class="car__mark">LADA(ВАЗ)</div>
+                  <div class="car__item">74519</div>
+                </a>
+                <a href="" class="car__name">
+                  <div class="car__mark">Audi</div>
+                  <div class="car__item">10361</div>
+                </a>
+                <a href="" class="car__name">
+                  <div class="car__mark">BMW</div>
+                  <div class="car__item">14996</div>
+                </a>
+                <a href="" class="car__name">
+                  <div class="car__mark">Chery</div>
+                  <div class="car__item">3395</div>
+                </a>
+                <a href="" class="car__name">
+                  <div class="car__mark">Citroen</div>
+                  <div class="car__item">2419</div>
+                </a>
+              </div>
+              <div class="col index col-6 col-sm-3">
+                <a href="" class="car__name">
+                  <div class="car__mark">LADA(ВАЗ)</div>
+                  <div class="car__item">74519</div>
+                </a>
+                <a href="" class="car__name">
+                  <div class="car__mark">Audi</div>
+                  <div class="car__item">10361</div>
+                </a>
+                <a href="" class="car__name">
+                  <div class="car__mark">BMW</div>
+                  <div class="car__item">14996</div>
+                </a>
+                <a href="" class="car__name">
+                  <div class="car__mark">Chery</div>
+                  <div class="car__item">3395</div>
+                </a>
+                <a href="" class="car__name">
+                  <div class="car__mark">Citroen</div>
+                  <div class="car__item">2419</div>
+                </a>
+              </div>
+              <div class="col index col-6 col-sm-3">
+                <a href="" class="car__name">
+                  <div class="car__mark">LADA(ВАЗ)</div>
+                  <div class="car__item">74519</div>
+                </a>
+                <a href="" class="car__name">
+                  <div class="car__mark">Audi</div>
+                  <div class="car__item">10361</div>
+                </a>
+                <a href="" class="car__name">
+                  <div class="car__mark">BMW</div>
+                  <div class="car__item">14996</div>
+                </a>
+                <a href="" class="car__name">
+                  <div class="car__mark">Chery</div>
+                  <div class="car__item">3395</div>
+                </a>
+                <a href="" class="car__name">
+                  <div class="car__mark">Citroen</div>
+                  <div class="car__item">2419</div>
+                </a>
+              </div>
+            </div>
+            
+
+            
+
+          </div>
+
+          <div class="buttonBottom_controll">
+            <div class="rangeType">
+              <div id="slider"></div>
+            </div>
+            <div class="submit">
+              <button class="range_button_submit">Показать 375 120 предложение</button>
+            </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <h1 class="heading_magazine_title">
+          <a href="">Журнал</a>
+      </h1>
+        <div class="sub">
+          Новости, обзоры, статьи
+        </div>
+        <div class="journal">
+
+          <ul class="list-unstyled">
+            <li class="media">
+              <img class="mr-3" src="img/journaltwo.svg" alt="Generic placeholder image">
+              <div class="media-body">
+                <h5 class="text-muted mt-0 mb-1">От Нивы до Карбонадо: лучшие объявления на Авто.ру</h5>
+              </div>
+            </li>
+            <li class="media my-4">
+              <img class="mr-3" src="img/journalthree.svg" alt="Generic placeholder image">
+              <div class="media-body">
+                <h5 class="text-muted mt-0 mb-1">8 штрафов, которые можно получить по ошибке, и как их отменить</h5>
+              </div>
+            </li>
+            <li class="media">
+              <img class="mr-3" src="img/journalthree.svg" alt="Generic placeholder image">
+              <div class="media-body">
+              <h5 class="text-muted mt-0 mb-1">В России на продажу выставили очень редкий спорткар ТагАЗ Aquila</h5>
+              </div>
+            </li>
+            <li class="media">
+              <img class="mr-3" src="img/journalthree.svg" alt="Generic placeholder image">
+              <div class="media-body">
+              <h5 class="mt-0 mb-1"><a href="" class="text-muted">От Нивы до Карбонадо: лучшие объявления на Авто.ру</a></h5>
+              </div>
+            </li>
+          </ul>
+          <a class="button_journal d-block" href="#">Все материалы</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--  -->
+
+
+      <div class="container">
+        <div class="header-button">
+          <div class="left-button">
+          <h1>Подборка</h1>
+          </div>
+          <div class="right-button d-none d-md-flex">
+            <div class="btn-group">
+              <button type="button" class="btn btn-choosen active"> <img src="img/Discount.svg" alt="">Новые со скидкой</button>
+              <button type="button" class="btn btn-choosen"> <img src="img/time.svg" alt="">Скоро в продаже</button>
+              <button type="button" class="btn btn-choosen"> <img src="img/Activity.svg" alt="">Спецпредложения</button>
+              <button type="button" class="btn btn-choosen"> <img src="img/sale.svg" alt="">Сниженная цена</button>
+            </div>
+          </div>
+      </div>
+          <div class="row">
+            <div class="uk-slider-container-offset" uk-slider>
+
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+            
+                    <ul class="uk-slider-items uk-child-width-1-2@s uk-grid">
+                        <li>
+                          <div class="col-md-12">
+                            <div class="card mb-4" style="border:none;">
+                               <img class="card-img-top" src="img/carsliderreno.svg" alt="Card image cap">
+                               <p class="badge__slier">Душанбе</p>
+                               <div class="wishlist">
+                               <img src="img/Heart.svg" alt="">
+                              </div>
+                               <div class="card-body">
+                                  <h5 class="card-title">Renault Duster, новый</h5>
+                                  <div class="d-flex">
+                                  <p class="mt-2 left-price">150 000c</p>
+                                  <p class="mt-2 right-price">170 000c</p>
+                                </div>
+                                <div class="sale">Скидка до 20 000с</div>
+                               </div>
+                            </div>
+                         </div>
+                        </li>
+                        <li>
+                          <div class="col-md-12">
+                            <div class="card mb-4" style="border:none;">
+                               <img class="card-img-top" src="img/carsliderreno.svg" alt="Card image cap">
+                               <p class="badge__slier">Душанбе</p>
+                               <div class="wishlist">
+                               <img src="img/Heart.svg" alt="">
+                              </div>
+                               <div class="card-body">
+                                  <h5 class="card-title">Renault Duster, новый</h5>
+                                  <div class="d-flex">
+                                  <p class="mt-2 left-price">150 000c</p>
+                                  <p class="mt-2 right-price">170 000c</p>
+                                </div>
+                                <div class="sale">Скидка до 20 000с</div>
+                               </div>
+                            </div>
+                         </div>
+                        </li>
+                        <li>
+                          <div class="col-md-12">
+                            <div class="card mb-4" style="border:none;">
+                               <img class="card-img-top" src="img/carsliderreno.svg" alt="Card image cap">
+                               <p class="badge__slier">Душанбе</p>
+                               <div class="wishlist">
+                               <img src="img/Heart.svg" alt="">
+                              </div>
+                               <div class="card-body">
+                                  <h5 class="card-title">Renault Duster, новый</h5>
+                                  <div class="d-flex">
+                                  <p class="mt-2 left-price">150 000c</p>
+                                  <p class="mt-2 right-price">170 000c</p>
+                                </div>
+                                <div class="sale">Скидка до 20 000с</div>
+                               </div>
+                            </div>
+                         </div>
+                        </li>
+                        <li>
+                          <div class="col-md-12">
+                            <div class="card mb-4" style="border:none;">
+                               <img class="card-img-top" src="img/carsliderreno.svg" alt="Card image cap">
+                               <p class="badge__slier">Душанбе</p>
+                               <div class="wishlist">
+                               <img src="img/Heart.svg" alt="">
+                              </div>
+                               <div class="card-body">
+                                  <h5 class="card-title">Renault Duster, новый</h5>
+                                  <div class="d-flex">
+                                  <p class="mt-2 left-price">150 000c</p>
+                                  <p class="mt-2 right-price">170 000c</p>
+                                </div>
+                                <div class="sale">Скидка до 20 000с</div>
+                               </div>
+                            </div>
+                         </div>
+                        </li>
+                        <li>
+                          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <div class="card mb-4" style="border:none;">
+                               <img class="card-img-top" src="img/carsliderreno.svg" alt="Card image cap">
+                               <p class="badge__slier">Душанбе</p>
+                               <div class="wishlist">
+                               <img src="img/Heart.svg" alt="">
+                              </div>
+                               <div class="card-body">
+                                  <h5 class="card-title">Renault Duster, новый</h5>
+                                  <div class="d-flex">
+                                  <p class="mt-2 left-price">150 000c</p>
+                                  <p class="mt-2 right-price">170 000c</p>
+                                </div>
+                                <div class="sale">Скидка до 20 000с</div>
+                               </div>
+                            </div>
+                         </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="slidenav">
+                      <a class="arrow__slider" href="#" uk-slidenav-previous uk-slider-item="previous">
+                        <img src="img/arrow-left.svg" alt="">
+                    </a>
+                    <a class="arrow__slider" href="#" uk-slidenav-next uk-slider-item="next">
+                      <img src="img/arrow-right.svg" alt="">
+                    </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-12">
+              <a href="" class="under-link">Перейти в раздел</a>
+            </div>
+          </div>
+      </div>
+
+      <!--  -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="banner_title">
+              <a href="#">Коммерческий транспорт</a>
+            </div>
+            <div class="banner_cols d-flex">
+              <div class="banner_col">
+                <div class="col col-6 col-sm-12 banner_item_col">
+                  <a href="">Легкие Коммерческиe</a>
+                </div>
+                <div class="col col-6 col-sm-12 banner_item_col">
+                  <a href="">Грузовики</a>
+                </div>
+                <div class="col col-6 col-sm-12 banner_item_col">
+                  <a href="">Седельный тягачи</a>
+                </div> 
+                <div class="col col-6 col-sm-12 banner_item_col">
+                  <a href="">Автобусы</a>
+                </div>
+                <div class="col col-6 col-sm-12 banner_item_col">
+                  <a href="">Прицепы и Полуприцепы</a>
+                </div>
+                <div class="col col-6 col-sm-12 banner_item_col">
+                  <a href="">Сельскохозяйственная</a>
+                </div>
+                
+              </div>
+              <div class="banner_col">
+                <div class="col col-6 col-sm-12 banner_item_col">
+                  <a href="">Легкие Коммерческиe</a>
+                </div>
+                <div class="col col-6 col-sm-12 banner_item_col">
+                  <a href="">Грузовики</a>
+                </div>
+                <div class="col col-6 col-sm-12 banner_item_col">
+                  <a href="">Седельный тягачи</a>
+                </div> 
+                <div class="col col-6 col-sm-12 banner_item_col">
+                  <a href="">Автобусы</a>
+                </div>
+                <div class="col col-6 col-sm-12 banner_item_col">
+                  <a href="">Прицепы и Полуприцепы</a>
+                </div>
+                <div class="col col-6 col-sm-12 banner_item_col">
+                  <a href="">Сельскохозяйственная</a>
+                </div>
+              </div>
+            </div>
+                <div>
+                  <a href="" class="line-under_col"> Перейти в раздел </a>
+                </div>            
+          </div>
+          <div class="col-lg-6">
+           <a href="">
+            <img src="img/banner.svg" class="img-fluid" alt="">
+            <p class="banner_badge">Фургоны</p>
+           </a>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+
+      <!--  -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="vip_section_text">
+              <h1>VIP-объявления</h1>
+            </div>
+          </div>
+        </div>
+          <div class="row">
+            <div class="uk-slider-container-offset" uk-slider>
+
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+            
+                    <ul class="uk-slider-items uk-child-width-1-2@s uk-grid">
+                        <li>
+                          <div class="col-md-12">
+                            <div class="card mb-4" style="border:none;">
+                               <img class="card-img-top" src="img/carsliderreno.svg" alt="Card image cap">
+                               <p class="badge__slier">Душанбе</p>
+                               <div class="wishlist">
+                               <img src="img/Heart.svg" alt="">
+                              </div>
+                               <div class="card-body">
+                                  <h5 class="card-title">Renault Duster, новый</h5>
+                                  <div class="d-flex">
+                                  <p class="mt-2 left-price">150 000c</p>
+                                  <p class="mt-2 right-price">170 000c</p>
+                                </div>
+                                <div class="sale">Скидка до 20 000с</div>
+                               </div>
+                            </div>
+                         </div>
+                        </li>
+                        <li>
+                          <div class="col-md-12">
+                            <div class="card mb-4" style="border:none;">
+                               <img class="card-img-top" src="img/carsliderreno.svg" alt="Card image cap">
+                               <p class="badge__slier">Душанбе</p>
+                               <div class="wishlist">
+                               <img src="img/Heart.svg" alt="">
+                              </div>
+                               <div class="card-body">
+                                  <h5 class="card-title">Renault Duster, новый</h5>
+                                  <div class="d-flex">
+                                  <p class="mt-2 left-price">150 000c</p>
+                                  <p class="mt-2 right-price">170 000c</p>
+                                </div>
+                                <div class="sale">Скидка до 20 000с</div>
+                               </div>
+                            </div>
+                         </div>
+                        </li>
+                        <li>
+                          <div class="col-md-12">
+                            <div class="card mb-4" style="border:none;">
+                               <img class="card-img-top" src="img/carsliderreno.svg" alt="Card image cap">
+                               <p class="badge__slier">Душанбе</p>
+                               <div class="wishlist">
+                               <img src="img/Heart.svg" alt="">
+                              </div>
+                               <div class="card-body">
+                                  <h5 class="card-title">Renault Duster, новый</h5>
+                                  <div class="d-flex">
+                                  <p class="mt-2 left-price">150 000c</p>
+                                  <p class="mt-2 right-price">170 000c</p>
+                                </div>
+                                <div class="sale">Скидка до 20 000с</div>
+                               </div>
+                            </div>
+                         </div>
+                        </li>
+                        <li>
+                          <div class="col-md-12">
+                            <div class="card mb-4" style="border:none;">
+                               <img class="card-img-top" src="img/carsliderreno.svg" alt="Card image cap">
+                               <p class="badge__slier">Душанбе</p>
+                               <div class="wishlist">
+                               <img src="img/Heart.svg" alt="">
+                              </div>
+                               <div class="card-body">
+                                  <h5 class="card-title">Renault Duster, новый</h5>
+                                  <div class="d-flex">
+                                  <p class="mt-2 left-price">150 000c</p>
+                                  <p class="mt-2 right-price">170 000c</p>
+                                </div>
+                                <div class="sale">Скидка до 20 000с</div>
+                               </div>
+                            </div>
+                         </div>
+                        </li>
+                        <li>
+                          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <div class="card mb-4" style="border:none;">
+                               <img class="card-img-top" src="img/carsliderreno.svg" alt="Card image cap">
+                               <p class="badge__slier">Душанбе</p>
+                               <div class="wishlist">
+                               <img src="img/Heart.svg" alt="">
+                              </div>
+                               <div class="card-body">
+                                  <h5 class="card-title">Renault Duster, новый</h5>
+                                  <div class="d-flex">
+                                  <p class="mt-2 left-price">150 000c</p>
+                                  <p class="mt-2 right-price">170 000c</p>
+                                </div>
+                                <div class="sale">Скидка до 20 000с</div>
+                               </div>
+                            </div>
+                         </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="slidenav">
+                      <a class="arrow__slider" href="#" uk-slidenav-previous uk-slider-item="previous">
+                        <img src="img/arrow-left.svg" alt="">
+                    </a>
+                    <a class="arrow__slider" href="#" uk-slidenav-next uk-slider-item="next">
+                      <img src="img/arrow-right.svg" alt="">
+                    </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-12">
+              <a href="" class="under-link">Перейти в раздел</a>
+            </div>
+          </div>
+      </div>
+      <!--  -->
+
+      <!--  -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+              <div class="head_title">
+                <a href="">Мотоцикл</a>
+              </div>
+              <div class="link_cols">
+                <div class="link_col">
+                  <div class="link_item">
+                    <a href="">Лёгкие коммерческие</a>
+                  </div>
+                  <div class="link_item">
+                    <a href="">Грузовики</a>
+                  </div>
+                  <div class="link_item">
+                    <a href="">Седельные тягачи</a>
+                  </div>
+                  <div class="link_item">
+                    <a href="">Автобусы</a>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <a href="" class="line-under_col"> Перейти в раздел </a>
+              </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="filter_col">
+                
+            </div>
+          </div>
+          
+          <div class="col-lg-3">
+            <img src="img/moto.svg" alt="">
+          </div>
+
+        </div>
+      </div>
+      <!--  -->
+
+<script src="js/jq.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/uikit.js"></script>
+<script src="js/main.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</body>
+</html>
